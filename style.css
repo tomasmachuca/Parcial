@@ -1,0 +1,141 @@
+:root {
+  /* Defini variables para mantener la paleta consistente en todas las paginas */
+  --fondo: #f3f4f6;
+  --superficie: #ffffff;
+  --texto: #1f2937;
+  --primario: #1e40af;
+  --secundario: #0f766e;
+  --borde: #d1d5db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* Use la tipografia del moodboard para que el sitio tenga identidad constante */
+  margin: 0;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  color: var(--texto);
+  background-color: var(--fondo);
+}
+
+.contenedor {
+  /* Este max-width cumple la regla del parcial de no pasar 960px */
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.encabezado {
+  background-color: var(--superficie);
+  border-bottom: 1px solid var(--borde);
+  padding: 2rem 0 1.5rem;
+  text-align: center;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--primario);
+}
+
+h1,
+h2 {
+  /* Reforce jerarquia usando otra fuente del moodboard para titulos */
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+h1 {
+  margin: 0.8rem 0 0.4rem;
+  color: var(--primario);
+}
+
+h2 {
+  margin: 0 0 0.6rem;
+  color: var(--secundario);
+}
+
+.presentacion {
+  max-width: 62ch;
+  margin: 0.5rem auto 0;
+}
+
+.principal {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+section {
+  background-color: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.galeria {
+  /* Flex me ayuda a resolver las 5 miniaturas de forma prolija y adaptable */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.galeria a {
+  width: 175px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+}
+
+.contacto {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.redes a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  border: 1px solid var(--borde);
+  background-color: var(--superficie);
+  color: var(--texto);
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+}
+
+.redes img {
+  width: 18px;
+  height: 18px;
+}
+
+.bio {
+  background-color: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pie {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  background-color: #111827;
+  color: #f9fafb;
+}

@@ -1,0 +1,34 @@
+Moodboard - 1er Parcial
+
+1) Paleta principal
+- Azul principal: #1E40AF
+- Verde secundario: #0F766E
+- Fondo claro: #F3F4F6
+- Superficie: #FFFFFF
+- Texto base: #1F2937
+- Bordes suaves: #D1D5DB
+
+2) Tipografias (Google Fonts)
+- Titulos: Montserrat (400, 600, 700)
+- Cuerpo: Source Sans 3 (400, 600)
+
+3) Estilo visual elegido
+- Estetica limpia y profesional.
+- Tarjetas con borde suave y espacios amplios para buena lectura.
+- Jerarquia visual fuerte entre h1, h2 y parrafos.
+- Iconografia simple para mantener coherencia visual.
+
+4) Criterios de uso
+- El contenido principal se mantiene en maximo 960px.
+- Fondo liso en todo el sitio para no competir con el contenido.
+- Contraste alto entre texto y fondo para mejorar legibilidad.
+- Miniaturas de ejercicios con encuadre uniforme y bordes suaves.
+
+5) Referencias consultadas
+- https://tympanus.net/codrops/
+- https://www.awwwards.com/
+- https://fontpair.co/
+- https://wireframe.cc/
+- https://www.moodboardcreator.dev/
+- https://www.adobe.com/products/firefly/features/moodboard.html
+- https://ar.pinterest.com/ideas/mood-board-web-design/914983925260/

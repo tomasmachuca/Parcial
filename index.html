@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Tomás Machuca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Elegi header porque marca bien el comienzo de la carta de presentacion -->
+    <header class="encabezado">
+      <div class="contenedor">
+        <img class="avatar" src="img/fotocv.jpg" alt="Foto de perfil de Tomás Machuca" />
+        <h1>Tomás Machuca</h1>
+        <p class="presentacion">
+          Soy estudiante de Ingenieria en Informatica y este portfolio resume mis practicas de
+          HTML5 y CSS vistas en clase.
+        </p>
+      </div>
+    </header>
+
+    <!-- Use main para dejar claro que este es el contenido central de la pagina -->
+    <main class="contenedor principal">
+      <!-- Este section me ayuda a agrupar la galeria como un bloque con sentido propio -->
+      <section aria-labelledby="titulo-galeria">
+        <h2 id="titulo-galeria">Galeria de ejercicios</h2>
+        <p>
+          Cada miniatura abre el index del ejercicio correspondiente, asi se puede revisar rapido
+          el desarrollo.
+        </p>
+
+        <div class="galeria">
+          <a href="ejercicios/ejercicio01/index.html">
+            <img src="img/ejercicio1.png" alt="Miniatura del ejercicio 1" />
+          </a>
+          <a href="ejercicios/ejercicio02/index.html">
+            <img src="img/ejercicio2.png" alt="Miniatura del ejercicio 2" />
+          </a>
+          <a href="ejercicios/ejercicio03/index.html">
+            <img src="img/ejercicio3.png" alt="Miniatura del ejercicio 3" />
+          </a>
+          <a href="ejercicios/ejercicio04/index.html">
+            <img src="img/ejercicio4.png" alt="Miniatura del ejercicio 4" />
+          </a>
+          <a href="ejercicios/ejercicio05/index.html">
+            <img src="img/ejercicio5.png" alt="Miniatura del ejercicio 5" />
+          </a>
+        </div>
+      </section>
+
+      <!-- Section separado para contacto, asi en la defensa puedo justificar jerarquia -->
+      <section aria-labelledby="titulo-contacto">
+        <h2 id="titulo-contacto">Contacto</h2>
+        <ul class="contacto">
+          <li>Email: tomasmachuca18@gmail.com</li>
+          <li>Legajo: 1136779</li>
+          <li>Telefono: 1132849850</li>
+          <li>Carrera: Ingenieria en Informatica</li>
+        </ul>
+      </section>
+
+      <!-- Nav secundario para no mezclar enlaces de navegacion con el contenido textual -->
+      <nav aria-label="Enlaces de interes" class="redes">
+        <a href="biografia.html">Ver biografia completa</a>
+        <a href="https://www.linkedin.com/in/tomas-machuca" target="_blank" rel="noopener noreferrer">
+          <img src="img/icon-linkedin.svg" alt="Icono de LinkedIn" />
+          LinkedIn
+        </a>
+        <a href="https://github.com/tomasmachuca" target="_blank" rel="noopener noreferrer">
+          <img src="img/icon-github.svg" alt="Icono de GitHub" />
+          GitHub
+        </a>
+      </nav>
+    </main>
+
+    <!-- Footer repetido segun consigna, con datos institucionales claros -->
+    <footer class="pie">
+      <p>Legajo: 1136779 | Telefono: 1132849850 | Carrera: Ingenieria en Informatica | Email institucional: tmachuca@uade.edu.ar</p>
+    </footer>
+  </body>
+</html>
