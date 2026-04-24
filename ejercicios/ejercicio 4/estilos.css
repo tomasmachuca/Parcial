@@ -15,9 +15,7 @@ body {
 .pagina {
   width: 100%;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 0;
 }
 
 .bloque {
@@ -25,39 +23,40 @@ body {
   max-width: 1360px;
   height: 768px;
   overflow: hidden;
-  display: flex;
+  position: relative;
+  font-size: 16px;
+}
+
+.bloque::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
 }
 
 .bloque.seccion4 {
   height: auto;
   min-height: 768px;
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 
-/* --- 1: hero (dos columnas flex, sin solapar con absolute) --- */
+/* --- 1: hero (dos columnas con inline-block) --- */
 .hero {
-  flex-direction: row;
-  align-items: stretch;
   background-color: #131212;
 }
 
 .hero__texto {
-  flex: 0 0 42%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  display: inline-block;
+  width: 42%;
+  vertical-align: top;
   padding-left: 58px;
   padding-right: 24px;
   background-color: #131212;
 }
 
 .hero__media {
-  flex: 1;
-  display: flex;
-  align-items: stretch;
-  min-width: 0;
+  display: inline-block;
+  width: 58%;
+  vertical-align: top;
   background-color: #131212;
 }
 
@@ -88,6 +87,7 @@ body {
 }
 
 .hero__btn {
+  display: inline-block;
   margin-top: 32px;
   padding: 11px 20px;
   background-color: #ffffff;
@@ -96,7 +96,6 @@ body {
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
-  align-self: flex-start;
 }
 
 .hero__btn:hover {
@@ -105,19 +104,15 @@ body {
 
 /* --- 2 --- */
 .seccion2 {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   background-color: #f4f5f7;
   padding-left: 60px;
   padding-right: 60px;
 }
 
 .seccion2__texto {
-  flex: 0 0 48%;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
 }
 
 .seccion2__texto h1 {
@@ -137,7 +132,7 @@ body {
 }
 
 .seccion2__btn {
-  align-self: flex-start;
+  display: inline-block;
   padding: 12px 18px;
   background-color: #000000;
   color: #ffffff;
@@ -147,10 +142,10 @@ body {
 }
 
 .seccion2__visual {
-  flex: 0 0 52%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: inline-block;
+  width: 52%;
+  vertical-align: top;
+  text-align: right;
 }
 
 .seccion2__img {
@@ -162,19 +157,15 @@ body {
 
 /* --- 3 --- */
 .seccion3 {
-  flex-direction: row;
   background-color: #0f0f0f;
 }
 
 .seccion3__texto {
-  flex: 0 0 50%;
-  max-width: 50%;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
   padding-left: 58px;
   padding-right: 34px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 .seccion3__titulo {
@@ -196,6 +187,7 @@ body {
 }
 
 .seccion3__btn {
+  display: inline-block;
   margin-top: 36px;
   padding: 11px 20px;
   background-color: #ffffff;
@@ -204,7 +196,6 @@ body {
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
-  align-self: flex-start;
 }
 
 .seccion3__btn:hover {
@@ -212,18 +203,17 @@ body {
 }
 
 .seccion3__visual {
-  flex: 1;
-  min-width: 0;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  text-align: right;
   padding: 96px 70px 56px 20px;
-  display: flex;
-  align-items: stretch;
-  justify-content: flex-end;
 }
 
 .seccion3__foto-wrap {
   width: 100%;
   max-width: 770px;
-  display: flex;
+  display: inline-block;
 }
 
 .seccion3__foto {
@@ -234,11 +224,8 @@ body {
   display: block;
 }
 
-/* --- 4: overlay solo con capas en background (sin capa absolute) --- */
+/* --- 4: overlay con background-image --- */
 .seccion4 {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   background-color: #1a1a1a;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
@@ -248,15 +235,13 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .seccion4__contenido {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  display: inline-block;
   padding: 48px 24px;
-  max-width: 100%;
+  vertical-align: middle;
 }
 
 .seccion4__firma {
@@ -276,15 +261,15 @@ body {
   color: #ffffff;
 }
 
-/* --- 5: columna derecha en flex; solape solo con márgenes negativos --- */
+/* --- 5: con márgenes negativos para solape --- */
 .seccion5 {
-  flex-direction: row;
-  align-items: center;
   background-color: #04061a;
 }
 
 .seccion5__texto {
-  flex: 0 0 58%;
+  display: inline-block;
+  width: 58%;
+  vertical-align: top;
   padding-left: 58px;
   padding-right: 36px;
 }
@@ -313,20 +298,16 @@ body {
 }
 
 .seccion5__visual {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-width: 0;
+  display: inline-block;
+  width: 42%;
+  vertical-align: top;
+  text-align: right;
   padding-right: 48px;
 }
 
 .seccion5__column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .seccion5__decor {
@@ -336,7 +317,6 @@ body {
 }
 
 .seccion5__decor--arriba {
-  align-self: flex-start;
   margin-bottom: -100px;
   margin-left: -40px;
 }
@@ -356,19 +336,15 @@ body {
 
 /* --- 6 --- */
 .seccion6 {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   background-color: #eff6ff;
   padding-left: 58px;
   padding-right: 58px;
 }
 
 .seccion6__texto {
-  flex: 0 0 55%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  display: inline-block;
+  width: 55%;
+  vertical-align: top;
 }
 
 .seccion6__texto h2 {
@@ -390,10 +366,10 @@ body {
 }
 
 .seccion6__visual {
-  flex: 0 0 45%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  display: inline-block;
+  width: 45%;
+  vertical-align: bottom;
+  text-align: right;
 }
 
 .seccion6__img {
@@ -410,13 +386,10 @@ body {
   max-width: 1360px;
   margin: 0 auto;
   padding: 24px 20px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  background-color: #111111;
-  color: #cccccc;
   font-size: 14px;
   line-height: 1.5;
+  background-color: #111111;
+  color: #cccccc;
 }
 
 .consigna strong {
