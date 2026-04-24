@@ -1,10 +1,10 @@
 :root {
-  --fondo: #eef2ff;
+  --fondo: #f3f4f6;
   --superficie: #ffffff;
-  --texto: #1e293b;
+  --texto: #1f2937;
   --primario: #1e40af;
-  --secundario: #2563eb;
-  --borde: #cbd5e1;
+  --secundario: #0f766e;
+  --borde: #d1d5db;
   --sombra: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
