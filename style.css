@@ -1,11 +1,11 @@
 :root {
-  /* Defini variables para mantener la paleta consistente en todas las paginas */
-  --fondo: #f3f4f6;
+  --fondo: #eef2ff;
   --superficie: #ffffff;
-  --texto: #1f2937;
-  --primario: #1e40af;
-  --secundario: #0f766e;
-  --borde: #d1d5db;
+  --texto: #1e293b;
+  --primario: #1d4ed8;
+  --secundario: #2563eb;
+  --borde: #cbd5e1;
+  --sombra: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -13,7 +13,6 @@
 }
 
 body {
-  /* Use la tipografia del moodboard para que el sitio tenga identidad constante */
   margin: 0;
   font-family: "Source Sans 3", Arial, sans-serif;
   color: var(--texto);
@@ -24,7 +23,6 @@ body {
 }
 
 .contenedor {
-  /* Este max-width cumple la regla del parcial de no pasar 960px */
   max-width: 960px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -33,6 +31,7 @@ body {
 .encabezado {
   background-color: var(--superficie);
   border-bottom: 1px solid var(--borde);
+  box-shadow: var(--sombra);
   padding: 2rem 0 1.5rem;
   text-align: center;
 }
@@ -46,7 +45,6 @@ body {
 
 h1,
 h2 {
-  /* Reforce jerarquia usando otra fuente del moodboard para titulos */
   font-family: "Montserrat", Arial, sans-serif;
 }
 
@@ -75,12 +73,12 @@ section {
   background-color: var(--superficie);
   border: 1px solid var(--borde);
   border-radius: 12px;
+  box-shadow: var(--sombra);
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
 .galeria {
-  /* Flex me ayuda a resolver las 5 miniaturas de forma prolija y adaptable */
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -89,6 +87,11 @@ section {
 
 .galeria a {
   width: 175px;
+  transition: transform 0.2s ease;
+}
+
+.galeria a:hover {
+  transform: translateY(-2px);
 }
 
 .galeria img {
@@ -118,9 +121,16 @@ section {
   text-decoration: none;
   border: 1px solid var(--borde);
   background-color: var(--superficie);
-  color: var(--texto);
+  color: var(--primario);
   border-radius: 8px;
   padding: 0.5rem 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.redes a:hover {
+  background-color: var(--primario);
+  border-color: var(--primario);
+  color: #ffffff;
 }
 
 .redes img {
@@ -132,6 +142,7 @@ section {
   background-color: var(--superficie);
   border: 1px solid var(--borde);
   border-radius: 12px;
+  box-shadow: var(--sombra);
   padding: 1rem;
   margin-bottom: 1rem;
 }

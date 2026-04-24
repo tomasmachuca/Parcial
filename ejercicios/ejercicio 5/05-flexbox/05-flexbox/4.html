@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 4 - Detalle de producto con Flexbox</title>
     <style>
-        /* ESTILOS BASE */
         * {
             margin: 0;
             padding: 0;
@@ -28,9 +27,8 @@
             padding: 2rem;
         }
 
-        /* Sección superior: miniaturas + imagen principal + panel info */
         .thumbnails {
-            display: flex; /* solo para alinear miniaturas internamente, pero no define el layout principal de columnas (el alumno debe resolver la fila de 3 secciones) */
+            display: flex;
             flex-direction: column;
             gap: 0.8rem;
         }
@@ -89,14 +87,13 @@
             margin-top: 1rem;
         }
 
-        /* Pestañas simuladas */
         .tabs {
             margin-top: 3rem;
             border-top: 1px solid #e2e8f0;
             padding-top: 1.5rem;
         }
         .tab-buttons {
-            display: flex; /* solo para alinear pestañas internamente, pero el layout general de la página lo define el alumno */
+            display: flex;
             gap: 1rem;
             margin-bottom: 1rem;
         }
@@ -111,7 +108,6 @@
             border-radius: 20px;
         }
 
-        /* Productos relacionados */
         .related-title {
             margin: 2rem 0 1rem 0;
         }
@@ -127,7 +123,6 @@
             width: 100%;
             border-radius: 16px;
         }
-        /* ===== AGREGAR FLEXBOX AQUÍ ===== */
         .product-top {
             display: flex;
             gap: 1.25rem;
@@ -136,16 +131,16 @@
         }
 
         .thumbnails {
-            flex: 0 0 100px;  /* ancho fijo para miniaturas */
+            flex: 0 0 100px;
         }
 
         .main-image {
-            flex: 2;          /* zona principal flexible (aprox. 2 partes) */
-            min-width: 0;     /* evita desbordes en pantallas angostas */
+            flex: 2;
+            min-width: 0;
         }
 
         .info-panel {
-            flex: 1.2;        /* panel secundario según enunciado */
+            flex: 1.2;
             min-width: 0;
         }
 
@@ -157,7 +152,7 @@
         }
 
         .related-item {
-            flex: 1 1 200px;  /* ancho base de 200px, adaptable */
+            flex: 1 1 200px;
             min-width: 0;
         }
         
@@ -165,19 +160,15 @@
 </head>
 <body>
     <div class="product-page">
-        <!-- FILA PRINCIPAL: miniaturas + imagen principal + panel info -->
         <div class="product-top">
-            <!-- Miniaturas izquierda -->
             <div class="thumbnails">
                 <img class="thumb" src="https://picsum.photos/id/20/100/100" alt="miniatura 1">
                 <img class="thumb" src="https://picsum.photos/id/26/100/100" alt="miniatura 2">
                 <img class="thumb" src="https://picsum.photos/id/96/100/100" alt="miniatura 3">
             </div>
-            <!-- Imagen principal -->
             <div class="main-image">
                 <img src="https://picsum.photos/id/20/500/400" alt="Producto principal">
             </div>
-            <!-- Panel de información -->
             <div class="info-panel">
                 <div class="product-title">Auriculares WavePro X</div>
                 <div class="price">$59.990</div>
@@ -191,7 +182,6 @@
             </div>
         </div>
 
-        <!-- Pestañas simuladas -->
         <div class="tabs">
             <div class="tab-buttons">
                 <div class="tab">Descripción</div>
@@ -203,7 +193,6 @@
             </div>
         </div>
 
-        <!-- Productos relacionados -->
         <h3 class="related-title">🔥 Productos relacionados</h3>
         <div class="related-grid">
             <div class="related-item">

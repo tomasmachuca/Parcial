@@ -35,7 +35,6 @@ body {
   overflow-y: visible;
 }
 
-/* --- 1: hero (dos columnas flex, sin solapar con absolute) --- */
 .hero {
   flex-direction: row;
   align-items: stretch;
@@ -103,7 +102,6 @@ body {
   background-color: #e8e8e8;
 }
 
-/* --- 2 --- */
 .seccion2 {
   flex-direction: row;
   align-items: center;
@@ -160,7 +158,6 @@ body {
   display: block;
 }
 
-/* --- 3 --- */
 .seccion3 {
   flex-direction: row;
   background-color: #0f0f0f;
@@ -234,7 +231,6 @@ body {
   display: block;
 }
 
-/* --- 4: overlay solo con capas en background (sin capa absolute) --- */
 .seccion4 {
   flex-direction: row;
   justify-content: center;
@@ -276,7 +272,6 @@ body {
   color: #ffffff;
 }
 
-/* --- 5: columna derecha en flex; solape solo con márgenes negativos --- */
 .seccion5 {
   flex-direction: row;
   align-items: center;
@@ -354,7 +349,6 @@ body {
   display: block;
 }
 
-/* --- 6 --- */
 .seccion6 {
   flex-direction: row;
   align-items: center;
@@ -404,7 +398,6 @@ body {
   margin-bottom: -40px;
 }
 
-/* Pie con texto de consigna */
 .consigna {
   width: 100%;
   max-width: 1360px;
